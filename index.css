@@ -148,8 +148,9 @@ select{
     margin-top: 20px;
     width: 100%;
     height: 100%;
-    padding-left: 280PX;
+    padding-left: 180PX;
 }
+.status-desc,
 .tasks-description,
 .added-date-description,
 .due-date-description,
@@ -167,11 +168,50 @@ select{
     text-align: center;
     font-family: 'PT Serif', serif;
     font-family: 'Sofia Sans', sans-serif;
-    padding-top: 20px;
+  
+}
+.status-desc{
+    width: 100px;
 }
 .tasks-description{
     width: 400PX;
+    
 }
 .added-date-description{
     width: 300PX;
+}
+.edit,
+.delete{
+    width: 70px;
+    height: 40px;
+    vertical-align: top;
+    display: inline-block;
+    border-radius: 10px;
+    color: white;
+    transition: opacity 0.5s;
+    cursor: pointer;
+}
+.edit{
+    background-color: rgb(0, 45, 168);
+}
+.delete{
+    background-color: RED;
+}
+.edit:hover{
+    color: rgb(0, 45, 168);
+    background-color: white;
+    opacity: 0.7;
+}
+.delete:hover{
+    color: RED;
+    background-color: white;
+    opacity: 0.7;
+}
+.delete:active,
+.edit:active{
+    opacity: 1;
+}  
+.status{
+    width: 40px;
+    height: 40px;
 }
