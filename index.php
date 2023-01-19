@@ -1,7 +1,17 @@
 <?php include "inc/header.php";
 $connection = mysqli_connect("localhost","Natalio","1");
 $db = mysqli_select_db($connection,'todo');
-$query = "SELECT * FROM todolist";
+
+
+$date = "added_date";
+//$query = "SELECT * FROM todolist WHERE checked='$id'";
+if (isset($_POST['sort'])){
+    $date = $_POST['sorting'];
+}
+
+
+
+$query = "SELECT * FROM todolist ORDER BY $date";
 $query_run = mysqli_query($connection, $query);
 ?>
 <!DOCTYPE html>
@@ -20,6 +30,7 @@ $query_run = mysqli_query($connection, $query);
             ?>
         <div class="status-desc">
             <input type="checkbox" name="check" id="" value="" class="status">
+            
         </div>
         <div class="tasks-description" style="margin-bottom: 10px;">
             <h2><?php echo $row['content']; ?></h2>

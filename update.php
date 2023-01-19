@@ -15,7 +15,7 @@
         
 </head>
 <body>
-    <div class="body">
+    <div class="body" style="margin-top:150px">
         <?php
     $servername = "localhost";
     $username = "Natalio";
@@ -26,6 +26,7 @@
     $conn = mysqli_connect($servername, $username, $password, $dbname);
     $id = $_POST['id'];
     $query = "SELECT * FROM todolist WHERE id='$id'";
+    
     $query_run = mysqli_query($conn,$query);
     if($query_run){
         while($row = mysqli_fetch_array($query_run)){
@@ -39,6 +40,7 @@
                 <input type="text" name = "content" class="search"  value="<?php echo $row['content']?>">
                 <input style="border: none; background-color: transparent;" type="date" class="calendar" name="due_date">
                 <button class="add-btn" name="update">Update</button>
+                <button class="add-btn" style="background-color: red;" name="cancel">Cancel</button>
             </div>
         </form>
         <div class="horizontal-line">
@@ -68,7 +70,7 @@
         mysqli_close($conn);
         }
         if (isset($_POST['cancel'])){
-            header("Location:passwords.php");}
+            header("Location:index.php");}
         ?>
        <?php
        }

@@ -30,29 +30,22 @@
             <hr style="width: 100%;">
         </div>
         <div class="sub-head">
-            <div class="filter">
-                <p>Filter</p>
-            </div>
-            <div class="filter-option">
             <form action="" method="post">
-                <select name="status" id="">
-                    <option value="All" name="all">All</option>
-                    <option value="Completed" name="completed">Completed</option>
-                    <option value="incompleted" name="incompleted">Incompleted</option>
-                    </select>
+                
+                
+                
+                <div class="filter" style="margin-left: 200px;">
+                    <input type="submit" value="Sort by" class="filter" style="margin-left: 00px;" name="sort">
                 </div>
-               
+                <div class="filter-option">
+                    <select name="sorting" id="">
+                        <option value="added_date">Added Date</option>
+                        <option value="due_date">Due Date</option>
+
+                    </select>
+                    
+                </div> 
             </form>
-            <div class="filter" style="margin-left: 200px;">
-                <p>Sort</p>
-            </div>
-            <div class="filter-option">
-            <select name="" id="">
-                <option value="added">Added Date</option>
-                <option value="due">Due Date</option>
-    
-                </select>
-            </div> 
         </div>
         <div class="sub-head-tasks">
             <div class="status-desc">
