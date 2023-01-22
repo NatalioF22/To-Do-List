@@ -1,0 +1,39 @@
+.calendar{
+    width: 70px;
+    height: 50px;
+    vertical-align: top;
+    transition: opacity 0.7s;
+    background-size: 70px;
+    border-radius: 10px;
+}
+input[type="date"]{
+    background-color: #0080ff;
+    padding: 1px;
+    font-family: "Roboto Mono",monospace;
+    color: #ffffff;
+    position: relative;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #11edc9;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 150px;
+    height: 50px;
+}
+.add-btn{
+    
+    height: 50px;
+}
+.add-btn:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.add-btn:active{
+    background-color: white;
+    color: rgb(9, 47, 198);
+}

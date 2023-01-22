@@ -5,69 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Sofia+Sans&display=swap" rel="stylesheet">
-        
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
-    <div class="body">
-        <header>
-            <h1 style="text-decoration: underline;"> <img src="img/logo.png" alt="logo" class="logo">My To do's</h1>
-        </header>
-        <form method="post" action="" >
-            <div class="search-div">
-                <input type="text" name="search" id="" class="search" placeholder="Add Item" required>
-                <input style="border: none; background-color: transparent;" type="date" class="calendar" name="due_date" required>
-                <button class="add-btn" name="submit">Add</button>
+    <div class="container-lg my-4">
+        <div class="row">
+            <div class="col">
+                <div class="p-5 bg-primary"><h1 style="text-align: center;">Todo's</h1></div>
             </div>
-        </form>
-        <div class="horizontal-line">
-            <hr style="width: 100%;">
         </div>
-        <div class="sub-head">
-            <form action="" method="post">
-                
-                
-                
-                <div class="filter" style="margin-left: 200px;">
-                    <input type="submit" value="Sort by" class="filter" style="margin-left: 00px;" name="sort">
+    </div>
+    <div class="container-lg">
+        <div class="row">
+            <div class="col">
+                <div class="p-3 bg-primary px-5">
+                    <form action="" method="post">
+                        <input type="text" name="search" id="" class="w-75 border rounded-3 display-6 px-4" placeholder="Add Item" required>
+                        <input type="date" class="calendar" name="due_date" required>
+                        <button class="btn btn-success align-top border rounded-3 display-3 px-4 add-btn" name="submit">Add</button>
+                    </form>
                 </div>
-                <div class="filter-option">
-                    <select name="sorting" id="">
-                        <option value="added_date">Added Date</option>
-                        <option value="due_date">Due Date</option>
-
-                    </select>
-                    
-                </div> 
-            </form>
+            </div>
         </div>
-        <div class="sub-head-tasks">
-            <div class="status-desc">
-                <h1>Status</h1>
+        <hr class="border border-primary border-3 opacity-75">
+    </div>
+    <div class="container-lg">
+        <div class="row">
+            <div class="col">
+                <div class="p-3 bg-primary">
+                    <form action="" method="post">
+                        <button class="btn bg-secondary" name="sort">Sort by</button>
+                        <select name="sorting" id="" class="btn btn-secondary">
+                            <option value="added_date">Added Date</option>
+                            <option value="due_date">Due Date</option>
+                        </select>
+                    </form>
+                </div>
             </div>
-            <div class="tasks-description">
-                <h1>Tasks</h1>
-            </div>
-            <div class="added-date-description">
-                <h1>Added Date</h1>
-            </div>
-            <div class="due-date-description">
-                <h1>Due Date</h1>
-            </div>
-            <div class="funtions-description">
-                <h1>Options</h1>
-            </div>
+            
         </div>
         
-            
+    </div>
+    <div class="container-lg mt-2">
+        <div class="row">
+            <div class="col">
+                <div class="p-1 bg-primary display-6 text lead fo"><h1 style="text-align: center; font-size:2vw;">Taks</h1></div>
+            </div>
+            <div class="col">
+                <div class="p-1 bg-primary"><h1 style="text-align: center;font-size:2vw;">Added</h1></div>
+            </div>
+            <div class="col">
+                <div class="p-1 bg-primary"><h1 style="text-align: center;font-size:2vw;">Due Date</h1></div>
+            </div>
+            <div class="col">
+                <div class="p-1 bg-primary"><h1 style="text-align: center;font-size:2vw;">Options</h1></div>
+            </div>
+        </div>
+        <hr class="border border-primary border-3 opacity-75">
+        
     </div>
     
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
 
@@ -92,4 +93,3 @@
     }
 
 ?>
-
